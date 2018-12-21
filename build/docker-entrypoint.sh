@@ -21,5 +21,6 @@ fi
 rm -rf /root/.ssh/*
 cp -R /tmp/.ssh /root/
 chown root:root /root/.ssh -R
+chmod 700 /root/.ssh
 
 exec "$@"
