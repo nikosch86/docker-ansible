@@ -18,4 +18,8 @@ if [ $(ls /ansible/*yml > /dev/null 2>&1; echo $?) -gt 0 ]; then
   cp /tmp/ansible/default-playbooks/*.yml /ansible/
 fi
 
+rm -rf /root/.ssh/*
+cp -R /tmp/.ssh /root/
+chown root:root /root/.ssh -R
+
 exec "$@"

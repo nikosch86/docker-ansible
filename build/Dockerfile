@@ -11,7 +11,7 @@ RUN mkdir -p /tmp/ansible
 RUN cp /etc/ansible/ansible.cfg /tmp/ansible/
 
 VOLUME /etc/ansible
-VOLUME /.ssh/
+VOLUME /root/.ssh/
 VOLUME /ansible
 
 RUN mkdir -p /tmp/ansible/default-scripts/ /tmp/ansible/default-playbooks/
